@@ -1,2 +1,2 @@
 # DarkHook
-Bind TOR-SOCKS with Target .ONION w/Custom Port
+Bind TOR-SOCKS with Target .ONION & Custom Port
