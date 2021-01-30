@@ -1,0 +1,16 @@
+#!/bin/bash
+echo Connecting to TOR.
+service tor start
+echo -e "\e[5m!!!Please keep this terminal running in order to maintain IP:PORT Bind!!!"
+echo -e "\e[0m"
+echo -e "\e[45m-----= Minimizing this terminal =-----" 
+echo -e "\e[0m"
+echo -e "\e[5mCONNECTED!"
+echo -e "\e[0m"  
+echo ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+echo "ENTER TARGET ONION"
+echo "example: jhef7rge64g47fh4dd4h.onion:80"
+echo ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+read vartarget
+sudo socat TCP4-LISTEN:8000,reuseaddr,fork SOCKS4A:127.0.0.1:$vartarget,socksport=9050
+
